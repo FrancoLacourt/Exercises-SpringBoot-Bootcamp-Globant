@@ -1,0 +1,128 @@
+body {
+    background-color: black;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+    color: white;
+}
+
+input[type="text"],
+textarea,
+button {
+    display: block;
+    margin-bottom: 10px;
+    width: 65%;
+    padding: 8px;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+#createTitle {
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+#createTitle::placeholder {
+    color: #908989;
+}
+#createTitle:focus {
+    border: none;
+    outline: 2px solid palegreen;
+    -moz-outline-radius: 6px;
+}
+
+
+#createBody {
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+#createBody::placeholder {
+    color: #908989;
+}
+#createBody:focus {
+    border: none;
+    outline: 2px solid palegreen;
+    -moz-outline-radius: 6px;
+}
+
+#editTitle {
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+#editTitle::placeholder {
+    color: #908989;
+}
+#editTitle:focus {
+    border: none;
+    outline: 2px solid palegreen;
+    -moz-outline-radius: 6px;
+}
+
+#editBody {
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+#editBody::placeholder {
+    color: #908989;
+}
+#editBody:focus {
+    border: none;
+    outline: 2px solid palegreen;
+    -moz-outline-radius: 6px;
+}
+
+
+
+
+button {
+    width: 65%;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #cccccc;
+    border-radius: 16px;
+}
+button:hover {
+    background-color: transparent;
+    border-color: palegreen;
+}
+button:active {
+    color: black;
+    background-color: palegreen;
+}
+
+
+.card {
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    max-width: 35%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.card:hover {
+    background-color: transparent;
+    color: palegreen;
+}
