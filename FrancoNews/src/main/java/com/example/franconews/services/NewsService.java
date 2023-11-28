@@ -123,7 +123,7 @@ public class NewsService {
 
     private void validate(News news) throws MyException {
 
-        if (news.getTitle().isEmpty() || news.getTitle() == null || onlySpaces(news.getTitle())) {
+        if (news.getTitle() == null || onlySpaces(news.getTitle())) {
             throw new MyException("Title can't be null or empty.");
         }
 
