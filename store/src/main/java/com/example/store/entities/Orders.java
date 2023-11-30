@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Order {
+public class Orders {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,14 +21,15 @@ public class Order {
 
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    private LocalDate date;
+    private LocalDate date = LocalDate.now();
 
     @ManyToOne
     private Client client;
+
     @OneToMany
     private List<Product> products;
 
     private Long orderNumber;
-    private boolean isActive;
+    private boolean isActive = true;
 
 }

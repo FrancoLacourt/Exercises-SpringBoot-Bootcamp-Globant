@@ -10,11 +10,10 @@ import lombok.*;
 @ToString
 public class ProductDTO {
 
-    private Long id_news;
+    private Long id_product;
     private String productName;
     private Integer price;
     private String color;
-
-
+    private boolean isActive = true;
 
 }

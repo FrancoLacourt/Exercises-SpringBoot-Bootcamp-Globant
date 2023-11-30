@@ -15,6 +15,9 @@ public class ProductMapper {
 
         productDTO.setProductName(product.getProductName());
         productDTO.setPrice(product.getPrice());
+        productDTO.setColor(product.getColor());
+        productDTO.setId_product(product.getId_product());
+        productDTO.setActive(product.isActive());
 
         return productDTO;
     }
@@ -24,6 +27,9 @@ public class ProductMapper {
 
         product.setProductName(productDTO.getProductName());
         product.setPrice(productDTO.getPrice());
+        product.setColor(productDTO.getColor());
+        product.setId_product(productDTO.getId_product());
+        product.setActive(productDTO.isActive());
 
         return product;
     }

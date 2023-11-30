@@ -1,9 +1,6 @@
 package com.example.store.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -16,11 +13,11 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_news;
+    private Long id_product;
 
     private String productName;
     private Integer price;
     private String color;
 
-
+    private boolean isActive = true;
 }

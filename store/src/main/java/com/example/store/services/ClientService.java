@@ -78,6 +78,7 @@ public class ClientService {
             client.setClientName(updatedClientDTO.getClientName());
             client.setClientLastName(updatedClientDTO.getClientLastName());
             client.setEmail(updatedClientDTO.getEmail());
+            client.setPhoneNumber(updatedClientDTO.getPhoneNumber());
 
             Client savedClient = clientRepository.save(client);
 
@@ -88,17 +89,19 @@ public class ClientService {
         }
     }
 
-    public void deactivateClient(Long id_client) {
+    public ClientDTO deactivateClient(Long id_client) {
 
         Client client = clientRepository.findById(id_client).orElse(null);
 
         if (client != null) {
             client.setActive(false);
             Client savedClient = clientRepository.save(client);
+            ClientDTO clientDTO = ClientMapper.toClientDTO(savedClient);
+            return clientDTO;
         } else {
-            System.out.println("It wasn´t possible to find");
+            System.out.println("It wasn´t possible to find a client with the ID: " + id_client);
+            return null;
         }
-
     }
 
 

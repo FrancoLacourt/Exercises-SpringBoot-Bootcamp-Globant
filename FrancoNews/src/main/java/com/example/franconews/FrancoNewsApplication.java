@@ -25,7 +25,6 @@ public class FrancoNewsApplication {
                         .termsOfService("http://swagger.io/terms")
                         .license(new License().name("Apache 2.0")
                                 .url("http://springdoc.org")));
-
     }
 
 
