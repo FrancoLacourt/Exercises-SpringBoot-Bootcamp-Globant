@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form id="registerForm" action="/auth/register" method="post">
+    <input type="text" id="email" placeholder="Correo electrónico" autocomplete="off">
+    <input type="password" id="password" placeholder="Contraseña">
+    <input type="text" id="name" placeholder="Nombre">
+    <input type="text" id="lastName" placeholder="Apellido">
+    <input type="text" id="country" placeholder="País">
+    <select id="role">
+        <option value="ADMIN">Administrador</option>
+        <option value="USER">Usuario</option>
+    </select>
+    <button type="submit">Registrarse</button>
+</form>
+
+<form id="loginForm">
+    <input type="text" id="loginEmail" placeholder="Correo electrónico" autocomplete="off">
+    <input type="password" id="loginPassword" placeholder="Contraseña">
+    <button type="submit">Iniciar Sesión</button>
+</form>
+
+</body>
+</html>

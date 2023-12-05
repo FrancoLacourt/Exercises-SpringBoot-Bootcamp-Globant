@@ -26,6 +26,4 @@ public class FrancoNewsApplication {
                         .license(new License().name("Apache 2.0")
                                 .url("http://springdoc.org")));
     }
-
-
 }
