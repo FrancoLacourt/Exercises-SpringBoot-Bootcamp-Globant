@@ -1,9 +1,8 @@
 package com.example.franconews.services;
 
-import com.example.franconews.entities.User;
+import com.example.franconews.entities.UserEntity;
 import com.example.franconews.repositories.UserRepository;
 import jakarta.servlet.http.HttpSession;
-import org.apache.catalina.filters.ExpiresFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -26,7 +25,7 @@ public class UserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
-        User user = userRepository.findByEmail(email).orElseThrow();
+        UserEntity user = userRepository.findByEmail(email).orElseThrow();
 
         if (user != null) {
             List<GrantedAuthority> permissions = new ArrayList<>();

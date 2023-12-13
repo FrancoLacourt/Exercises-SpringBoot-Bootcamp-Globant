@@ -1,9 +1,6 @@
 package com.example.franconews.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
 
@@ -11,6 +8,7 @@ import org.hibernate.proxy.HibernateProxy;
 @Entity
 @Getter
 @Setter
+@Data
 @ToString
 @RequiredArgsConstructor
 public class News {
@@ -22,7 +20,6 @@ public class News {
     private String title;
     private String body;
     private boolean isActive = true;
-
 
 
     @Override
